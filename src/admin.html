@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendeFácil — Painel Administrativo</title>
+</head>
+<body>
+    <header>
+        <h1>Painel do Gestor</h1>
+        <p>Gerencie os agendamentos do dia</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="agendar.html">Agendar Horário</a></li>
+                <li><a href="admin.html">Painel Administrativo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Agenda de Hoje</h2>
+            <p>Lista de clientes agendados para atendimento na data corrente.</p>
+
+            <table>
+                <caption>Agendamentos Confirmados e Pendentes</caption>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Carlos Silva</td>
+                        <td>Corte de Cabelo</td>
+                        <td>Confirmado</td>
+                        <td>
+                            <button type="button">Concluir</button>
+                            <button type="button">Cancelar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Marcos Souza</td>
+                        <td>Barba Completa</td>
+                        <td>Pendente</td>
+                        <td>
+                            <button type="button">Confirmar</button>
+                            <button type="button">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgendeFácil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
