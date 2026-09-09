@@ -10,3 +10,9 @@
 - O conteúdo central de cada página foi encapsulado na tag `<main>`.
 - Utilizamos `<section>` e `<article>` na página inicial para dividir os serviços de forma autossuficiente e lógica.
 - No formulário (`agendar.html`), utilizamos `<fieldset>`, `<legend>` e a tag `<label>` ligada ao `input` pelo atributo `for`, o que melhora a usabilidade em celulares e a acessibilidade.
+
+## Decisões de Estilização - Etapa 03
+- **CSS Externo:** Optamos por separar o CSS em um arquivo `style.css` dentro da pasta `src/`, garantindo que todas as páginas compartilhem a mesma identidade visual sem repetição de código.
+- **Layout com Flexbox:** Utilizamos `display: flex` na navegação (`<nav>`) para centralizar os itens de forma dinâmica e moderna.
+- **Responsividade (Mobile First adaptado):** Implementamos *Media Queries* (`@media (max-width: 600px)`) para adaptar o menu de navegação e as tabelas em telas menores, garantindo que a aplicação seja perfeitamente usável em smartphones.
+- **UI/UX Básica:** Aplicamos feedbacks visuais (`:hover`) nos botões e links, além de um sistema de cores padronizado para dar aparência profissional ao protótipo.

@@ -1,0 +1,181 @@
+/* RESET BÁSICO - Remove as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Cor de fundo cinza bem claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: #2c3e50; /* Azul escuro */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header p {
+    color: #18bc9c; /* Verde destaque */
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para colocar os itens lado a lado */
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #18bc9c;
+}
+
+/* CONTEÚDO PRINCIPAL (MAIN) */
+main {
+    max-width: 900px; /* Limita a largura para não ficar esticado em telas grandes */
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #18bc9c;
+    padding-bottom: 0.5rem;
+}
+
+/* CARTÕES DE SERVIÇO (ARTICLES) */
+article {
+    background: white;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h3 {
+    color: #18bc9c;
+}
+
+article a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    background-color: #2c3e50;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* FORMULÁRIO DE AGENDAMENTO */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 0.5rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #18bc9c;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background: #128f76;
+}
+
+/* TABELA DO PAINEL ADMINISTRATIVO */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: white;
+    margin-top: 3rem;
+}
+
+/* RESPONSIVIDADE (Design para Celulares) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Coloca os menus um embaixo do outro no celular */
+        gap: 10px;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block; /* Adapta a tabela para rolar no celular */
+    }
+}
