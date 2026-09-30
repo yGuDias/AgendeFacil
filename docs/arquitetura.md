@@ -16,3 +16,9 @@
 - **Layout com Flexbox:** Utilizamos `display: flex` na navegação (`<nav>`) para centralizar os itens de forma dinâmica e moderna.
 - **Responsividade (Mobile First adaptado):** Implementamos *Media Queries* (`@media (max-width: 600px)`) para adaptar o menu de navegação e as tabelas em telas menores, garantindo que a aplicação seja perfeitamente usável em smartphones.
 - **UI/UX Básica:** Aplicamos feedbacks visuais (`:hover`) nos botões e links, além de um sistema de cores padronizado para dar aparência profissional ao protótipo.
+
+## Decisões de Interatividade - Etapa 04
+- **Manipulação do DOM:** Utilizámos JavaScript Vanilla (puro) com `document.addEventListener("DOMContentLoaded")` para garantir que os scripts apenas correm após a interface estar totalmente carregada.
+- **Validação de Formulários:** Inserimos uma validação dinâmica no campo de data (`agendar.html`) utilizando o atributo `min` para impedir agendamentos no passado, melhorando a consistência dos dados.
+- **Prevenção de Comportamento Padrão:** Utilizámos `evento.preventDefault()` no formulário para simular o envio de dados sem causar o recarregamento da página (comportamento essencial para futuras integrações com APIs assíncronas).
+- **Interatividade na Tabela:** No painel administrativo (`admin.html`), implementámos a escuta de eventos (`addEventListener`) nos botões de ação para alterar dinamicamente o estado (Confirmado/Cancelado) e a cor da célula correspondente na tabela, fornecendo feedback visual imediato ao utilizador.
