@@ -1,0 +1,23 @@
+[
+    {
+      "id": "corte",
+      "titulo": "Corte de Cabelo Clássico",
+      "descricao": "Corte tradicional com acabamento na navalha e lavagem inclusa.",
+      "duracao": "40 min",
+      "preco": "R$ 50,00"
+    },
+    {
+      "id": "barba",
+      "titulo": "Barba Completa",
+      "descricao": "Modelagem de barba com toalha quente e produtos hidratantes.",
+      "duracao": "30 min",
+      "preco": "R$ 35,00"
+    },
+    {
+      "id": "combo",
+      "titulo": "Combo Corte + Barba",
+      "descricao": "O pacote completo para o seu visual com desconto especial.",
+      "duracao": "1h 10 min",
+      "preco": "R$ 75,00"
+    }
+  ]
