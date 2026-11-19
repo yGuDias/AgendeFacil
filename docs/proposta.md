@@ -1,49 +1,48 @@
-# AgendeFácil — Sistema de Agendamento para Pequenos Negócios
+# Proposta e Especificação do Projeto — AgendeFácil
 
-## 1. Descrição do Problema
-Pequenos prestadores de serviço (como barbearias, salões de beleza, estúdios de tatuagem e profissionais autônomos) frequentemente gerenciam seus horários de atendimento de forma manual por aplicativos de mensagens (WhatsApp) ou cadernos de papel. Isso gera problemas operacionais graves, como sobreposição de horários, esquecimentos, falta de controle financeiro básico e dificuldade para os clientes visualizarem horários livres de forma autônoma e rápida.
+## Nome da Aplicação
+AgendeFácil
 
-## 2. Público-Alvo
-- **Profissionais Autônomos / Prestadores de Serviço:** Barbeiros, manicures, cabeleireiros, consultores e terapeutas.
-- **Clientes Finais:** Pessoas que buscam agendar horários de forma prática, rápida e sem precisar de ligações ou trocas excessivas de mensagens.
+## Descrição do Problema
+Pequenos prestadores de serviços (como barbearias, salões de beleza, estúdios e profissionais autônomos) costumam organizar horários de forma manual por mensagens ou anotações. Isso gera conflitos de horários, esquecimentos, falta de organização da agenda e dificuldade para os clientes consultarem e reservarem horários com praticidade.
 
-## 3. Objetivo Principal da Aplicação
-Fornecer uma aplicação Web responsiva e intuitiva que permita aos clientes visualizarem serviços e realizarem agendamentos de forma autônoma, enquanto oferece aos profissionais um painel centralizado para gerenciar sua agenda diária e status de atendimento.
+## Público-Alvo
+- **Clientes:** Pessoas que desejam consultar serviços e agendar horários de forma rápida e simples.
+- **Gestores / Prestadores de Serviço:** Profissionais ou responsáveis por pequenos negócios que precisam visualizar e gerenciar a agenda diária de atendimentos.
 
-## 4. Funcionalidades (Requisitos Funcionais)
-1. **Cadastro e Gestão de Serviços:** O profissional pode cadastrar, editar e remover serviços oferecidos (nome, descrição, preço e duração).
-2. **Visualização de Disponibilidade:** Exibição dos horários livres por data e serviço.
-3. **Realização de Agendamento:** Interface para o cliente selecionar serviço, data, horário e informar seus dados de contato.
-4. **Painel Administrativo (Dashboard):** Tela de controle onde o profissional visualiza todos os agendamentos do dia.
-5. **Gerenciamento de Status:** Capacidade de atualizar o status de um agendamento (Pendente, Confirmado, Concluído, Cancelado).
+## Objetivo Principal da Aplicação
+Disponibilizar uma aplicação Web responsiva para apoiar a marcação de horários pelos clientes e o gerenciamento da agenda diária pelo gestor do negócio.
 
-## 5. Entidades e Conceitos do Domínio
-1. **Cliente:** Armazena informações de contato (Nome, Telefone, E-mail).
-2. **Serviço:** Representa o serviço prestado (Título, Descrição, Preço, Duração em minutos).
-3. **Agendamento:** Relaciona o Cliente, o Serviço, a Data, o Horário escolhido e o Status atual.
+## Funcionalidades (Requisitos Funcionais)
+1. **Visualização de Serviços:** Exibição dos serviços disponíveis para o cliente.
+2. **Agendamento de Horário:** Formulário para o cliente selecionar serviço, data e horário e informar seus dados.
+3. **Validação de Data:** Impedir a seleção de datas retroativas no formulário de agendamento.
+4. **Visualização da Agenda:** Exibição dos agendamentos no painel administrativo.
+5. **Atualização de Status:** Alteração do status dos agendamentos no painel administrativo (ex.: Confirmado, Concluído, Cancelado).
 
-## 6. Telas / Interfaces da Aplicação
-1. **Página Inicial (Home / Vitrine):** Apresentação do negócio e listagem dos serviços em destaque com botão de agendamento rápido.
-2. **Formulário de Agendamento:** Tela interativa onde o cliente preenche seus dados e escolhe o horário desejado.
-3. **Painel Administrativo:** Tela restrita para listagem, acompanhamento e alteração de status dos agendamentos diários.
+## Entidades e Conceitos do Domínio
+- **Serviço:** Representa o atendimento oferecido (título, descrição, duração, preço).
+- **Cliente:** Representa quem solicita o agendamento (nome, telefone, e-mail).
+- **Agendamento:** Relaciona serviço, cliente, data, horário e status do atendimento.
 
-## 7. Operações do Sistema (CRUD Principal)
-1. `POST /api/servicos` — Cadastrar novo serviço.
-2. `GET /api/servicos` — Listar todos os serviços disponíveis.
-3. `POST /api/agendamentos` — Criar um novo agendamento.
-4. `GET /api/agendamentos` — Listar os agendamentos realizados.
-5. `PATCH /api/agendamentos/:id` — Atualizar o status de um agendamento (ex: Confirmar ou Cancelar).
+## Telas / Interfaces
+1. **Página Inicial (`index.html`):** Apresenta a aplicação, serviços em destaque e navegação principal.
+2. **Tela de Agendamento (`agendar.html`):** Contém o formulário para reserva de horário.
+3. **Painel Administrativo (`admin.html`):** Exibe a tabela de agendamentos e controles de status.
 
-## 8. Stack Tecnológica Planejada
-- **Cliente (Front-end):** HTML5 Semântico, CSS3 (Flexbox/Grid), JavaScript (ES Modules).
-- **Servidor (Back-end):** Node.js com Express.
-- **Persistência:** Banco de dados SQLite (ou armazenamento em arquivo JSON para as etapas iniciais).
+## Operações do Sistema
+1. **Consultar serviços:** Obter a lista de serviços disponíveis.
+2. **Criar agendamento:** Submeter os dados de um novo agendamento.
+3. **Listar agendamentos:** Consultar os agendamentos registrados.
+4. **Atualizar status de agendamento:** Alterar o estado de um agendamento existente.
+5. **Remover/cancelar agendamento:** Cancelar ou excluir um registro de agendamento conforme a regra do sistema.
 
-## 9. Visão Geral da Arquitetura (Diagrama)
-[ Navegador / Cliente ] -- (HTTP Request / Fetch API) --> [ Servidor Node.js / Express ]
-         │                                                          │
-  HTML / CSS / JS                                           Lógica de Negócio / API REST
-         │                                                          │
-         └──────────────────<── JSON / HTML ────────────────────────┘
-                                                                    │
-                                                             [ Banco de Dados / SQLite ]
+## Tecnologias Planejadas
+- **Cliente (Front-end):** HTML5, CSS3 e JavaScript.
+- **Servidor (Back-end):** Node.js (com serviços/rotas conforme evolução das etapas).
+- **Persistência:** Arquivo JSON / banco de dados conforme a evolução do projeto ao longo das etapas.
+
+## Visão Geral da Arquitetura
+```text
+[ Navegador (HTML / CSS / JS) ] <---> [ Camada de Serviço / API / Dados ] <---> [ Persistência (JSON / Banco de Dados) ]
+```

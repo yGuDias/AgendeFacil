@@ -23,10 +23,10 @@
             <h2>Faça o seu Agendamento</h2>
             <p>Preencha os campos abaixo para reservar o seu horário com nossos profissionais.</p>
 
-            <form action="#" method="POST">
+            <form action="#" method="POST" novalidate>
                 <fieldset>
                     <legend>Informações do Cliente</legend>
-                    
+
                     <div>
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
@@ -67,6 +67,7 @@
                     </div>
                 </fieldset>
 
+                <p id="feedback-agendamento" role="status" aria-live="polite"></p>
                 <button type="submit">Confirmar Agendamento</button>
             </form>
         </section>
@@ -76,7 +77,6 @@
         <p>&copy; 2026 AgendeFácil. Todos os direitos reservados.</p>
     </footer>
 
-    <script type="module" src="script.js"></script>.
-    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
