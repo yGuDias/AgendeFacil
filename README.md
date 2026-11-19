@@ -28,8 +28,8 @@ Pequenos prestadores de serviço que controlam horários manualmente (por mensag
 - Layout responsivo com Flexbox, CSS Grid e múltiplos breakpoints (Etapa 03).
 - Validação de datas, validação de entradas inválidas e atualização dinâmica de status na tabela (Etapa 04).
 - Modularização com ES Modules (`script.js` e `api.js`), consulta e envio assíncrono simulado com tratamento de estados (Etapa 05).
-- API REST em Node.js + Express com CRUD completo para `agendamentos` (Etapa 06)[cite: 34].
+- API REST em Node.js + Express com CRUD completo para `agendamentos` (Etapa 06).
 
 ## Limitações Conhecidas
 - A aplicação encontra-se na etapa de Front-end modularizado com dados simulados em JSON; as alterações de status na tabela e novos agendamentos ainda não possuem persistência definitiva em banco de dados real.
-- A API da Etapa 06 utiliza persistência em arquivo JSON local sem banco de dados relacional configurado e ainda não está integrada diretamente às páginas HTML do front-end[cite: 34].
+- A API da Etapa 06 utiliza persistência em arquivo JSON local sem banco de dados relacional configurado e ainda não está integrada diretamente às páginas HTML do front-end.
