@@ -17,3 +17,8 @@ Este documento registra os testes funcionais, de responsividade e de integraçã
 - **Teste 2:** Validação do sucesso da consulta (`Fetch API` com `async/await`) consumindo `src/api/servicos.json` e renderizando os cartões no DOM. *Status: Passou.*
 - **Teste 3:** Teste de tratamento de erro forçando caminho inválido no `fetch` para comprovar a exibição da mensagem de erro ao usuário. *Status: Passou.*
 - **Teste 4:** Teste de submissão assíncrona simulada do formulário de agendamento (`enviarAgendamento`) com exibição dos estados de envio e sucesso. *Status: Passou.*
+
+## Etapa 06 — API REST da Aplicação
+- **Teste 1:** Consulta de listagem (`GET /api/agendamentos`) e consulta por ID (`GET /api/agendamentos/:id`). *Status: Passou.*
+- **Teste 2:** Criação (`POST /api/agendamentos`), atualização (`PATCH /api/agendamentos/:id`) e exclusão (`DELETE /api/agendamentos/:id`). *Status: Passou.*
+- **Teste 3:** Validação de entradas inválidas (`400`) e ID inexistente (`404`) conforme `docs/etapa-06.md` e `api/postman_collection.json`. *Status: Passou.*
