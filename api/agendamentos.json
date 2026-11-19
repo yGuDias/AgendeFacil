@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "cliente": "Carlos Silva",
+    "telefone": "(62) 99999-1111",
+    "servico": "Corte de Cabelo Clássico",
+    "data": "2026-11-25",
+    "horario": "09:00",
+    "status": "Confirmado"
+  },
+  {
+    "id": 2,
+    "cliente": "Marcos Souza",
+    "telefone": "(62) 99999-2222",
+    "servico": "Barba Completa",
+    "data": "2026-11-25",
+    "horario": "10:30",
+    "status": "Confirmado"
+  }
+]

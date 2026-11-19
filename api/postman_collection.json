@@ -1,0 +1,63 @@
+{
+    "info": {
+      "name": "AgendeFacil - Etapa 06 API REST",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET Listar Agendamentos",
+        "request": {
+          "method": "GET",
+          "url": "http://localhost:3000/api/agendamentos"
+        }
+      },
+      {
+        "name": "GET Consultar Agendamento por ID",
+        "request": {
+          "method": "GET",
+          "url": "http://localhost:3000/api/agendamentos/1"
+        }
+      },
+      {
+        "name": "POST Criar Agendamento",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"cliente\": \"Ana Paula\",\n  \"telefone\": \"(62) 98888-3333\",\n  \"servico\": \"Combo Corte + Barba\",\n  \"data\": \"2026-11-26\",\n  \"horario\": \"14:00\"\n}"
+          },
+          "url": "http://localhost:3000/api/agendamentos"
+        }
+      },
+      {
+        "name": "PATCH Atualizar Status do Agendamento",
+        "request": {
+          "method": "PATCH",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"status\": \"Confirmado\"\n}"
+          },
+          "url": "http://localhost:3000/api/agendamentos/2"
+        }
+      },
+      {
+        "name": "DELETE Excluir Agendamento",
+        "request": {
+          "method": "DELETE",
+          "url": "http://localhost:3000/api/agendamentos/2"
+        }
+      }
+    ]
+  }
